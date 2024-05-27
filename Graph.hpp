@@ -15,7 +15,7 @@ namespace ariel{
         void loadGraph(std::vector<std::vector<int>> &v);
         string printGraph();
         bool isConnected();
-        std::vector<std::vector<int>> getMatrix();
+        std::vector<std::vector<int>> getMatrix() const;
         std::vector<std::pair<size_t, size_t>>  getEdges() ;
         Graph operator+(Graph& g1  );
         Graph operator*(Graph& g1  );
@@ -30,13 +30,13 @@ namespace ariel{
         Graph& operator+=(Graph& g1 );
         Graph& operator-=(Graph& g1 );
         bool operator==(Graph& g1);
-        bool operator!=(Graph& g1);
-        bool operator>(Graph& g1);
+        bool operator!=(Graph& g1) ;
+        bool operator>(  Graph& g1) const;
         bool operator<(Graph& g1);
         bool operator>=(Graph& g1);
         bool operator<=(Graph& g1);
-        bool isSubMatrix(Graph g1 , Graph g2);
-        void setMatrix(std::vector<std::vector<int>> o);
+        bool isSubMatrix(Graph g1 , Graph g2) const;
+        void setMatrix(std::vector<std::vector<int>> o) ;
     };
 }
 #endif
