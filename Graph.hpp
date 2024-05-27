@@ -12,7 +12,7 @@ namespace ariel{
         bool mekuvan ;
         std::vector<std::vector<int>> ourGraph;
         public:
-        void loadGraph(std::vector<std::vector<int>> v);
+        void loadGraph(std::vector<std::vector<int>> &v);
         string printGraph();
         bool isConnected();
         std::vector<std::vector<int>> getMatrix();
