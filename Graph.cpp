@@ -48,7 +48,7 @@ bool Graph :: isConnected (){
     }
     return true;
 }
-std::vector<std::vector<int>> Graph :: getMatrix(){
+std::vector<std::vector<int>> Graph :: getMatrix() const{
     return this->ourGraph;
 }
 std::vector<std::pair<size_t, size_t>> Graph :: getEdges()  {
@@ -230,7 +230,7 @@ bool Graph ::operator!=(Graph& g1){
     }
     return false;
 }
-bool Graph :: isSubMatrix(Graph g1 , Graph g2){// checking if g1 is a submatrix of g2 or the ooposite
+bool Graph :: isSubMatrix(Graph g1 , Graph g2) const{// checking if g1 is a submatrix of g2 or the ooposite
     size_t v =g1.getMatrix().size();
     size_t v2 =g2.getMatrix().size();
     size_t min1=0;
@@ -274,7 +274,7 @@ bool Graph :: isSubMatrix(Graph g1 , Graph g2){// checking if g1 is a submatrix 
     }
     return answer;
 }
-bool Graph ::operator>(Graph& g1){//cheking which matrix is bigger based on your rules
+bool Graph ::operator>(Graph& g1) const{//cheking which matrix is bigger based on your rules
     bool answer=true;
     Graph g0=*this;
     int sum1=0;
@@ -348,7 +348,6 @@ Graph Graph::operator-( ){// minus onori
     Graph g0=*this;
     return g0*(-1);
 }
-
 
 
 
