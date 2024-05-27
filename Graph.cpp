@@ -4,7 +4,7 @@ using namespace ariel;
 using namespace std;
 #include <unordered_set>
 
-void Graph :: loadGraph(std::vector<std::vector<int>> v){
+void Graph :: loadGraph(std::vector<std::vector<int>> &v){
 
     if (v.empty()){
         std :: __throw_invalid_argument("matrx is enpty ");
